@@ -35,6 +35,17 @@
                 cursor: pointer;
                 margin-top: 15px;
             }
+            .result {
+                font-size: 34px;
+                font-weight: bold;
+                margin-top: 15px;
+            }
+            .positive {
+                color: red;
+            }
+            .negative {
+                color: green;
+            }
         </style>
     </head>
     <body>
@@ -77,7 +88,9 @@
                 </table>
                 <input type = "submit" value = 'SUBMIT'>
             </form>
-            Result:{{result2}}
+            <div class="result">
+                Result: <span class="{% if result2 == 'Positive' %}positive{% else %}negative{% endif %}">{{ result2 }}</span>
+            </div>
         </div>
     </body>
 </html>
